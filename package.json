@@ -2,14 +2,10 @@
   "name": "render-ssr",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build": "ng build --configuration=production",
     "build:ssr": "ng build --configuration=production && ng run render-ssr:server:production",
     "serve:ssr": "npm run build:ssr && npm run start",
-    "test": "ng test",
-    "serve:ssr:render-ssr": "node dist/render-ssr/server/server.mjs"
+    "start": "node dist/render-ssr/main.js"
   },
   "private": true,
   "dependencies": {
